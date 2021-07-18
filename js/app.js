@@ -1,8 +1,8 @@
 let tipBtn = document.querySelectorAll('.tip-text');
 let tipPercentage = document.querySelectorAll('.tip-percentage');
 let resetBtn = document.querySelector('.reset');
-let billInput = document.querySelector('.bill-input');
-let peopleInput = document.querySelector('.people-input');
+let billInput = document.getElementById('bill-input');
+let peopleInput = document.getElementById('people-input');
 let customTipInput = document.querySelector('.custom-tip');
 let activeBtn = document.querySelector('.active');
 let errorText = document.querySelector('.error-text');
@@ -14,6 +14,7 @@ function calculate() {
 	const people = parseFloat(peopleInput.value);
 	const amount = (principal * percent) / people;
 	const total = principal / people + amount;
+	
 	tipPerson.textContent = '$' + amount.toFixed(2);
 	totalPerson.textContent = '$' + total.toFixed(2);
 	return;
@@ -71,6 +72,9 @@ function clearContent() {
 	// Clear input validation
 	peopleInput.classList.remove('error');
 	errorText.style.display = 'none';
+
+	// Remove the active class on tip button
+	activeBtn.classList.remove('active')
 }
 
 resetBtn.addEventListener('click', clearContent);

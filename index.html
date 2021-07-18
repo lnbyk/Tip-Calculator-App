@@ -9,26 +9,16 @@
 
 		<title>Frontend Mentor | Tip calculator app</title>
 		<link rel="stylesheet" href="style/style.css" />
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 	<body>
-		<main class="flex">
+		<div class="flex">
 			<img class="logo" src="images/logo.svg" alt="logo" />
 			<div class="splitter splitter-flex">
 				<div class="tip-left">
 					<div class="bill">
 						<h4 class="left-title">Bill</h4>
-						<input class="bill-input" type="number" />
+						<label for="bill-input"></label>
+						<input id="bill-input" type="number" />
 					</div>
 					<div class="tips">
 						<div class="select-tip">
@@ -46,7 +36,8 @@
 					<div class="people">
 						<h4 class="left-title">Number of People</h4>
 						<span class="error-text">Can't be zero</span>
-						<input class="people-input" type="number" />
+						<label for="people-input"></label>
+						<input id="people-input" type="number" />
 					</div>
 				</div>
 				<div class="splitter-right">
@@ -67,9 +58,9 @@
 					<button class="btn reset reset-text">Reset</button>
 				</div>
 			</div>
-		</main>
+		</div>
 
-		<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://samadjei.com/">Sam Adjei</a>.</div>
+		<div role="userinfo" class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://samadjei.com/">Sam Adjei</a>.</div>
 	</body>
 	<script src="js/app.js"></script>
 </html>

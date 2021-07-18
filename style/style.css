@@ -48,14 +48,7 @@ body {
 	color: var(--Dark-grayish-cyan);
 	font-size: 16px;
 	background-color: var(--Light-grayish-cyan);
-	min-height: 100vh;
-}
-
-.container {
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 0 2rem;
-	overflow: hidden;
+	height: 100vh;
 }
 
 /* Center the app  */
@@ -79,6 +72,7 @@ body {
 	max-width: 92rem;
 	padding: 3.2rem;
 	border-radius: var(--border-radius-lg);
+	overflow: hidden;
 }
 
 /* Split the two different sections */
@@ -302,6 +296,14 @@ input[type='number'] {
 	color: var(--Very-dark-cyan);
 }
 
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
 /* Media Queries */
 @media screen and (max-width: 60rem) {
 	.logo {
@@ -335,6 +337,8 @@ input[type='number'] {
 
 	.tips {
 		padding: 3.2rem 0;
+		width: 31.1rem;
+		overflow: hidden;
 	}
 
 	.tip-left {

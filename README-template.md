@@ -16,11 +16,10 @@ Users should be able to:
 
 ![](./images/screenshot.png)
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/tip-calculator-app-Vp1-OHZPo)
+- Live Site URL: [Add live site URL here](https://tip-calculator-app-pi.vercel.app/)
 
 ## My process
 
@@ -30,13 +29,11 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - Vanilla JavaScript
 
 ### What I learned
 
-I undertook this challenge as a way to refresh my understanding of JavaScript. It was really helpful in getting me back to the basics and i enjoyed the challenge it gave me as an entry-level project to improving my vanilla js skills. 
-
+I undertook this challenge as a way to refresh my understanding of JavaScript. It was really helpful in getting me back to the basics and i enjoyed the challenge it gave me as an entry-level project to improving my vanilla js skills.
 
 ## Author
 
