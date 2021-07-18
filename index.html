@@ -11,14 +11,13 @@
 		<link rel="stylesheet" href="style/style.css" />
 	</head>
 	<body>
-		<div class="flex">
+		<main role="main" class="flex">
 			<img class="logo" src="images/logo.svg" alt="logo" />
-			<div class="splitter splitter-flex">
+			<div role="contentinfo" class="splitter splitter-flex">
 				<div class="tip-left">
 					<div class="bill">
 						<h4 class="left-title">Bill</h4>
-						<label for="bill-input"></label>
-						<input id="bill-input" type="number" />
+						<label for="bill-input"> <input id="bill-input" type="number" aria-label="Input" /></label>
 					</div>
 					<div class="tips">
 						<div class="select-tip">
@@ -36,11 +35,10 @@
 					<div class="people">
 						<h4 class="left-title">Number of People</h4>
 						<span class="error-text">Can't be zero</span>
-						<label for="people-input"></label>
-						<input id="people-input" type="number" />
+						<label for="people-input"> <input id="people-input" type="number" aria-label="Input" /></label>
 					</div>
 				</div>
-				<div class="splitter-right">
+				<div  class="splitter-right">
 					<div class="tip-amount">
 						<div class="amount-left">
 							<h5 class="right-title">Tip Amount</h5>
@@ -58,9 +56,9 @@
 					<button class="btn reset reset-text">Reset</button>
 				</div>
 			</div>
-		</div>
+		</main>
 
-		<div role="userinfo" class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://samadjei.com/">Sam Adjei</a>.</div>
+		<div  class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://samadjei.com/">Sam Adjei</a>.</div>
 	</body>
 	<script src="js/app.js"></script>
 </html>
