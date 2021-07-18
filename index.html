@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Tip calculator app</title>
+		<link rel="stylesheet" href="style/style.css" />
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="flex">
+			<img class="logo" src="images/logo.svg" alt="logo" />
+			<div class="splitter splitter-flex">
+				<div class="tip-left">
+					<div class="bill">
+						<h4 class="left-title">Bill</h4>
+						<input class="bill-input" type="number" />
+					</div>
+					<div class="tips">
+						<div class="select-tip">
+							<h4 class="left-title">Select Tip %</h4>
+						</div>
+						<div class="btn-grid">
+							<button class="btn active tip-percentage tip-text">5%</button>
+							<button class="btn tip-percentage tip-text">10%</button>
+							<button class="btn tip-percentage tip-text">15%</button>
+							<button class="btn tip-percentage tip-text">25%</button>
+							<button class="btn tip-percentage tip-text">50%</button>
+							<input class="custom custom-tip" placeholder="Custom" type="number" />
+						</div>
+					</div>
+					<div class="people">
+						<h4 class="left-title">Number of People</h4>
+						<span class="error-text">Can't be zero</span>
+						<input class="people-input" type="number" />
+					</div>
+				</div>
+				<div class="splitter-right">
+					<div class="tip-amount">
+						<div class="amount-left">
+							<h5 class="right-title">Tip Amount</h5>
+							<span class="person-text">/ person</span>
+						</div>
+						<span class="tip-person"></span>
+					</div>
+					<div class="tip-amount">
+						<div class="total-left">
+							<h5 class="right-title">Total</h5>
+							<span class="person-text">/ person</span>
+						</div>
+						<span class="total-person"></span>
+					</div>
+					<button class="btn reset reset-text">Reset</button>
+				</div>
+			</div>
+		</main>
+
+		<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://samadjei.com/">Sam Adjei</a>.</div>
+	</body>
+	<script src="js/app.js"></script>
+</html>

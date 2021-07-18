@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+	/* Primary */
+	--Strong-cyan: #26c0ab;
+	/* Neutral */
+	--Very-dark-cyan: #00494d;
+	--Darker-grayish-cyan: #5e7a7d;
+	--Dark-grayish-cyan: #7f9c9f;
+	--Light-grayish-cyan: #c5e4e7;
+	--Lighter-grayish-cyan: #f4fafa;
+	--Cyan: #9fe8df;
+	--White: #ffffff;
+	--Error: #e17052;
+	/* Items */
+	--border-radius-lg: 2.5rem;
+	--border-radius-md: 1.5rem;
+	--border-radius-sm: 0.5rem;
+	/* Text */
+	--font-weight-bold: 700;
+	--font-family: 'Space Mono', monospace;
+	/* Animation */
+	--animation: all 0.3s ease-out;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	/* automatically inherit box-sizing from the body element */
+	/* box-sizing: inherit; */
+	box-sizing: border-box;
+}
+
+/* setting the root font-size  */
+html {
+	box-sizing: border-box;
+	/* change to 1px so that we know that 1rem will equal 10px */
+	/* change the 10px to a percentage which will translate to the percentage given by the browser */
+	/* 10/16*100 */
+	/* this method is used when a user decides to adjust the font size on the browser  */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-family);
+	color: var(--Dark-grayish-cyan);
+	font-size: 16px;
+	background-color: var(--Light-grayish-cyan);
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+/* Center the app  */
+.flex {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+	padding-top: 16.3rem;
+	padding-bottom: 8.786rem;
+}
+
+/* Styling for tip background */
+.splitter {
+	background: var(--White);
+	max-width: 92rem;
+	padding: 3.2rem;
+	border-radius: var(--border-radius-lg);
+}
+
+/* Split the two different sections */
+.splitter-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Splitter Right */
+.tip-left {
+	width: 41.3rem;
+	height: 41.7rem;
+	margin-right: 5rem;
+}
+
+.left-title {
+	font-weight: var(--font-weight-bold);
+	font-family: var(--font-family);
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: var(--Darker-grayish-cyan);
+	padding-bottom: 1.6rem;
+}
+
+.tips {
+	padding: 4rem 0;
+}
+
+/* Styling the input fields */
+[type='number'] {
+	position: relative;
+	background: var(--Lighter-grayish-cyan);
+	border: 0.2rem solid transparent;
+	width: 37.9rem;
+	height: 4.8rem;
+	border-radius: var(--border-radius-sm);
+	text-align: right;
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+	color: var(--Very-dark-cyan);
+	font-weight: var(--font-weight-bold);
+	font-family: var(--font-family);
+	padding-right: 1.926rem;
+	transition: var(--animation);
+}
+
+/* Styling the custom input field */
+[type='number'].custom {
+	width: 11.8rem;
+	height: 4.8rem;
+}
+
+[type='number']:hover {
+	cursor: pointer;
+	border: 0.2rem solid var(--Strong-cyan);
+}
+
+/* Hide Arrows From Input Number  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.bill,
+.people {
+	position: relative;
+}
+
+/* Positioning icons in the input fields */
+.bill::after {
+	content: '';
+	background: url(../images/icon-dollar.svg) center no-repeat;
+	position: absolute;
+	top: 5.5rem;
+	left: 1.926rem;
+	display: block;
+	width: 9.84px;
+	height: 15.46px;
+}
+
+.people::after {
+	content: '';
+	background: url(../images/icon-person.svg) center no-repeat;
+	position: absolute;
+	top: 5.5rem;
+	left: 1.926rem;
+	display: block;
+	width: 13px;
+	height: 16px;
+}
+
+/* Styling for tip buttons */
+.btn-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1.6rem;
+}
+
+.btn {
+	transition: var(--animation);
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: var(--Cyan);
+}
+
+.tip-percentage {
+	background: var(--Very-dark-cyan);
+	font-weight: var(--font-weight-bold);
+	text-align: center;
+	border: none;
+	border-radius: var(--border-radius-sm);
+	width: 11.7rem;
+	height: 4.8rem;
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+}
+
+.tip-text {
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-bold);
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+	text-align: center;
+	color: var(--White);
+}
+
+.tip-percentage:hover {
+	background: var(--Strong-cyan);
+	color: var(--Very-dark-cyan);
+}
+
+.active {
+	background: var(--Strong-cyan);
+	color: var(--Very-dark-cyan);
+}
+
+.tip-text.custom {
+	background-color: var(--Lighter-grayish-cyan);
+	color: var(--Darker-grayish-cyan);
+}
+
+/* Input validation for Number of People field */
+.error {
+	border: 0.2rem solid var(--Error);
+}
+
+.error-text {
+	display: none;
+	position: absolute;
+	right: 1.7rem;
+	top: 0;
+	color: var(--Error);
+}
+
+/* Splitter Right */
+.splitter-right {
+	background-color: var(--Very-dark-cyan);
+	padding: 4rem;
+	border-radius: var(--border-radius-md);
+}
+
+.right-title {
+	font-size: 1.6rem;
+	color: var(--White);
+	width: 9.8rem;
+}
+
+.tip-amount {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.1rem;
+}
+
+.amount-left {
+	text-align: left;
+}
+
+.tip-person,
+.total-person {
+	font-weight: var(--font-weight-bold);
+	font-size: 4.8rem;
+	line-height: 7.1rem;
+	text-align: right;
+	letter-spacing: -1px;
+	color: var(--Strong-cyan);
+}
+
+.person-text {
+	font-weight: var(--font-weight-bold);
+	font-size: 1.3rem;
+	line-height: 1.9rem;
+	color: var(--Dark-grayish-cyan);
+}
+
+/* Reset Button  */
+.reset {
+	background-color: var(--Strong-cyan);
+	border: none;
+	width: 33.3rem;
+	height: 4.8rem;
+	border-radius: var(--border-radius-sm);
+	margin-top: 12.2rem;
+}
+
+.reset-text {
+	text-transform: uppercase;
+	font-weight: var(--font-weight-bold);
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: center;
+	color: var(--Very-dark-cyan);
+}
+
+/* Media Queries */
+@media screen and (max-width: 60rem) {
+	.logo {
+		padding-top: 5rem;
+		padding-bottom: 4.086rem;
+	}
+	.splitter-flex {
+		flex-direction: column;
+	}
+
+	[type='number'] {
+		width: 31.1rem;
+		height: 4.8rem;
+	}
+
+	.tip-percentage,
+	[type='number'].custom {
+		width: 14.663rem;
+		height: 4.8rem;
+	}
+
+	.splitter {
+		max-width: 37.5rem;
+	}
+
+	.btn-grid {
+		width: 31.1rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 1.6rem;
+	}
+
+	.tips {
+		padding: 3.2rem 0;
+	}
+
+	.tip-left {
+		margin-right: 0;
+	}
+
+	.error-text {
+		right: 10rem;
+	}
+
+	.splitter-right {
+		padding-top: 3.7rem;
+		padding-bottom: 2.4rem;
+		padding-right: 2.2rem;
+		padding-left: 2.2rem;
+		margin-top: 7rem;
+	}
+
+	/* Reset Button  */
+	.reset {
+		max-width: 100%;
+		width: 28.1rem;
+		height: 4.8rem;
+		margin-top: 3.2rem;
+		text-align: center;
+	}
+}
